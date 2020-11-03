@@ -21,8 +21,8 @@ hgit{
 }
     
 pluginBundle {
-    website = 'https://geoint.nrlssc.org/'
-    vcsUrl = 'https://github.com/seanrl/nrl-gradle/gplugin-commons.git'
+    website = 'https://github.com/nrl-gradle/gplugin-commons'
+    vcsUrl = 'https://github.com/nrl-gradle/gplugin-commons.git'
     tags = ['common']
 }
 
