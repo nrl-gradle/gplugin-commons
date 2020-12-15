@@ -36,7 +36,17 @@ enum PropertyName {
         }
     }
 
-    boolean getAsBoolean(Project project){
+    boolean getAsBoolean(Project project)
+    {
+        return getAsBoolean(project, names)
+    }
+    
+    static boolean getAsBoolean(Project project, String... names)
+    {
+        return getAsBoolean(project, names.toList())
+    }
+    
+    static boolean getAsBoolean(Project project, List<String> names){
         boolean retVal = false
         for(String name : names){
             if(project.hasProperty(name)){
@@ -46,8 +56,19 @@ enum PropertyName {
         }
         return retVal
     }
+    
+    
+    String getAsString(Project project)
+    {
+        return getAsString(project, names)
+    }
 
-    String getAsString(Project project){
+    static String getAsString(Project project, String... names)
+    {
+        return getAsString(project, names.toList())
+    }
+    
+    static String getAsString(Project project, List<String> names){
         String retVal = ''
         for(String name : names){
             if(project.hasProperty(name)){
@@ -58,7 +79,17 @@ enum PropertyName {
         return retVal
     }
 
-    boolean exists(Project project){
+    boolean exists(Project project)
+    {
+        return exists(project, names)
+    }
+    
+    static boolean exists(Project project, String... names)
+    {
+        return exists(project, names.toList())    
+    }
+    
+    static boolean exists(Project project, List<String> names){
         boolean retVal = false
         for(String name : names){
             if(project.properties.containsKey(name)){
