@@ -25,7 +25,8 @@ enum PropertyName {
     resolveArti('resolveArti', 'resolveArtifactory'),
     resolveNexus('resolveNexus'),
     publishArti('publishArti', 'publishArtifactory'),
-    publishNexus('publishNexus')
+    publishNexus('publishNexus'),
+    groupCode('groupCode')
 
 
     private static Logger logger = LoggerFactory.getLogger(PropertyName.class)
