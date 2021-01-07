@@ -16,14 +16,14 @@ import javax.net.ssl.*
 class PluginUtils {
     private static Logger logger = LoggerFactory.getLogger(PluginUtils.class)
 
-    static String execute(String command, File exeDir){
-        logger.debug("Executing command: '$command'")
+    static String execute(String command, File exeDir, boolean no_log = false){
+        if(!no_log) logger.debug("Executing command: '$command'")
         def env = System.getenv().collect { k, v -> "$k=$v" }
         return command.execute(env, exeDir).getText().trim()
     }
 
-    static String execute(List command, File exeDir){
-        logger.debug("Executing command: '$command'")
+    static String execute(List command, File exeDir, boolean no_log = false){
+        if(!no_log) logger.debug("Executing command: '$command'")
         def env = System.getenv().collect { k, v -> "$k=$v" }
         return command.execute(env, exeDir).getText().trim()
     }
