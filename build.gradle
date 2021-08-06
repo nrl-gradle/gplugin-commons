@@ -2,15 +2,15 @@ plugins{
     id 'java-gradle-plugin'
     id 'groovy'
     id 'com.gradle.plugin-publish' version '0.11.0'
-    id 'nrlssc.gradle' version '1.32.40'
+    id 'nrlssc.gradle' version '3.0.85'
 }
 
 sourceCompatibility = 1.8
 compileJava.options.encoding = 'UTF-8'
 
 dependencies {
-    compile gradleApi()
-    compile localGroovy()
+    compileClasspath gradleApi()
+    compileClasspath localGroovy()
 
     testImplementation gradleTestKit(),
             'junit:junit:4.12'
