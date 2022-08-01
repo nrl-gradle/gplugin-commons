@@ -15,6 +15,7 @@ enum PropertyName {
     disconnected('disconnected'),
     graphVizPath('graphVizPath'),
     isCI("isCI", "is_ci"),
+    preferCoprojectSubdir('preferCoprojectSubdir'),
     gitCommandPath('gitCommandPath'),
     
     artiUsername('artiUsername'),
