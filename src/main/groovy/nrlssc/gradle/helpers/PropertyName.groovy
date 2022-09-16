@@ -6,12 +6,11 @@ import org.slf4j.LoggerFactory
 
 enum PropertyName {
     artiURL("artiURL"),
-    nexusURL("nexusURL"),
+    gitlabURL("gitlabURL"),
     hgCommandPath("hgCommandPath"),
     resolveRemote("remote_repos", "resolveRemote"),
     fastBuild("fast_build", "fastBuild"),
-    publishUsername("publishUsername"),
-    publishPassword("publishPassword"),
+
     disconnected('disconnected'),
     graphVizPath('graphVizPath'),
     isCI("isCI", "is_ci"),
@@ -20,13 +19,17 @@ enum PropertyName {
     
     artiUsername('artiUsername'),
     artiPassword('artiPassword'),
-    nexusUsername('nexusUsername'),
-    nexusPassword('nexusPassword'),
+    artiPublishUsername("artiPublishUsername"),
+    artiPublishPassword("artiPublishPassword"),
+    gitlabUsername('gitlabUsername'),
+    gitlabPassword('gitlabPassword'),
+    gitlabPublishUsername('gitlabPublishUsername'),
+    gitlabPublishPassword('gitlabPublishPassword'),
     
     resolveArti('resolveArti', 'resolveArtifactory'),
-    resolveNexus('resolveNexus'),
+    resolveGitlab('resolveGitlab'),
     publishArti('publishArti', 'publishArtifactory'),
-    publishNexus('publishNexus'),
+    publishGitlab('publishGitlab'),
     groupCode('groupCode')
 
 
