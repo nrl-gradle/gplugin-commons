@@ -25,6 +25,8 @@ enum PropertyName {
     gitlabPassword('gitlabPassword'),
     gitlabPublishUsername('gitlabPublishUsername'),
     gitlabPublishPassword('gitlabPublishPassword'),
+    gitlabProjectUsername('gitlabProjectUsername'),
+    gitlabProjectPassword('gitlabProjectPassword'),
     
     resolveArti('resolveArti', 'resolveArtifactory'),
     resolveGitlab('resolveGitlab'),
