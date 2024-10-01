@@ -21,17 +21,19 @@ enum PropertyName {
     artiPassword('artiPassword'),
     artiPublishUsername("artiPublishUsername"),
     artiPublishPassword("artiPublishPassword"),
+
     gitlabUsername('gitlabUsername'),
     gitlabPassword('gitlabPassword'),
     gitlabPublishUsername('gitlabPublishUsername'),
     gitlabPublishPassword('gitlabPublishPassword'),
-    gitlabProjectUsername('gitlabProjectUsername'),
-    gitlabProjectPassword('gitlabProjectPassword'),
     
     resolveArti('resolveArti', 'resolveArtifactory'),
     resolveGitlab('resolveGitlab'),
     publishArti('publishArti', 'publishArtifactory'),
     publishGitlab('publishGitlab'),
+
+    gitlabProject('gitlabProject'),
+
     groupCode('groupCode')
 
 
