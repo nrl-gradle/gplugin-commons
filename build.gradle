@@ -1,7 +1,8 @@
 plugins{
     id 'java-gradle-plugin'
     id 'groovy'
-    id 'com.gradle.plugin-publish' version '1.0.0-rc-1'
+    id 'java'
+    id 'com.gradle.plugin-publish' version '1.3.0'
     id 'nrlssc.gradle' version '4.0.126'
 }
 
@@ -21,20 +22,19 @@ hgit{
     forceGit = true
 }
     
-pluginBundle {
-    website = 'https://github.com/nrl-gradle/gplugin-commons'
-    vcsUrl = 'https://github.com/nrl-gradle/gplugin-commons.git'
-    tags = ['common']
-}
 
 gradlePlugin {
+    website = 'https://github.com/nrl-gradle/gplugin-commons'
+    vcsUrl = 'https://github.com/nrl-gradle/gplugin-commons.git'
+
     //noinspection GroovyAssignabilityCheck
     plugins {
-        commonsLib {
+        create('commonsLib'){
             id = 'nrlssc.gplugin-commons'
             displayName = 'gplugin-commons'
             description = 'This is not a plugin, just a library needed for other nrlssc plugins'
             implementationClass = 'nrlssc.gradle.helpers.PluginUtils'
+            tags = ['common']
         }
     }
 }
