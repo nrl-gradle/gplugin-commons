@@ -21,20 +21,20 @@ dependencies {
 hgit{
     forceGit = true
 }
-    
+
+pluginBundle {
+    website = 'https://github.com/nrl-gradle/gplugin-commons'
+    vcsUrl = 'https://github.com/nrl-gradle/gplugin-commons.git'
+    tags = ['common']
+}
 
 gradlePlugin {
-    website.set('https://github.com/nrl-gradle/gplugin-commons')
-    vcsUrl.set('https://github.com/nrl-gradle/gplugin-commons.git')
-
-    //noinspection GroovyAssignabilityCheck
     plugins {
         create('commonsLib'){
             id = 'nrlssc.gplugin-commons'
             displayName = 'gplugin-commons'
             description = 'This is not a plugin, just a library needed for other nrlssc plugins'
             implementationClass = 'nrlssc.gradle.helpers.PluginUtils'
-            tags.set(['common'])
         }
     }
 }
