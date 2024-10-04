@@ -24,8 +24,8 @@ hgit{
     
 
 gradlePlugin {
-    website = 'https://github.com/nrl-gradle/gplugin-commons'
-    vcsUrl = 'https://github.com/nrl-gradle/gplugin-commons.git'
+    website.set('https://github.com/nrl-gradle/gplugin-commons')
+    vcsUrl.set('https://github.com/nrl-gradle/gplugin-commons.git')
 
     //noinspection GroovyAssignabilityCheck
     plugins {
@@ -34,7 +34,7 @@ gradlePlugin {
             displayName = 'gplugin-commons'
             description = 'This is not a plugin, just a library needed for other nrlssc plugins'
             implementationClass = 'nrlssc.gradle.helpers.PluginUtils'
-            tags = ['common']
+            tags.set(['common'])
         }
     }
 }
